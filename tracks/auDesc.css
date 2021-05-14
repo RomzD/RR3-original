@@ -1,0 +1,13 @@
+.auDesc{
+    background: linear-gradient(90deg, rgba(241, 191, 150, 0.986), rgb(221, 107, 14));  
+    clip-path: polygon(72% 0%, 84% 0%, 72% 100%, 60% 100%); /* 42.87 +14,29= */
+}
+
+.auDescSmall{
+    background: linear-gradient(90deg, rgba(241, 191, 150, 0.986), rgb(221, 107, 14));  
+    clip-path: polygon(69.603% 0%, 81.603% 0%, 72% 100%, 60% 100%);
+}
+
+.auName{
+    margin-left: 73%;
+}

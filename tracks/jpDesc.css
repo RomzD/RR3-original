@@ -1,0 +1,13 @@
+.jpDesc{
+    background: linear-gradient(90deg, rgba(241, 150, 211, 0.986), rgb(221, 14, 159));  
+    clip-path: polygon(84% 0%, 96% 0%, 84% 100%, 72% 100%);/* 42.87 +14,29= */;
+}
+
+.jpDescSmall{
+    background: linear-gradient(90deg, rgba(241, 150, 211, 0.986), rgb(221, 14, 159));  
+    clip-path: polygon(81.603% 0%, 93.603% 0%, 84% 100%, 72% 100%)
+
+}
+.jpName{
+    margin-left: 86%;
+}

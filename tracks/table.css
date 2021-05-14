@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'table font';
+    src: url('Bad\ Boys.ttf');
+}
+
+.tableContainer{
+    width:100%;
+    height: min-content;
+    max-height: 30%;
+    overflow: hidden;
+}
+.tableContainerOpened{
+    max-height: 100%;
+    transition: 2s;
+}
+
+.tableContainerClosed{
+    max-height: 30%;    
+    transition: 2s;
+
+}
+
+
+
+.levelBountyTable{
+    table-layout: fixed;
+    border-collapse: collapse;
+    width:100%;
+    height: 750px;   
+   
+
+}
+.mainTableHeader{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 12.13%;
+    font-size: 3rem;
+    padding: 2% 0;    
+    text-transform: uppercase;
+    position: relative;
+}
+
+caption, .tablePlace, .mainTableHeader{
+    font-family: 'table font';
+}
+
+.tablePlace{
+    writing-mode:vertical-rl;
+    -webkit-text-orientation: upright;
+    text-orientation:upright;
+    position: absolute;
+    font-size: 32px;
+    top:0;
+    left:40%;
+}
+
+.tdPlace{
+  position:relative;
+  vertical-align: top;
+  margin-top: 0px;
+  font-size: 2em;
+}
+
+.tdPlaceOpened{
+    transition: 1s;
+    padding-top: 200px;
+}
+
+.tdPlaceClosed{
+    padding-top: 0px;
+    transition: 1s;
+}
+
+td {
+    text-align: center;
+}
+
+caption{
+font-size: 2em;
+text-transform: uppercase;
+caption-side: top;
+text-align: left;
+padding-left: 10%;
+position:relative;
+}
+
+.expandButton{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:10%;
+    height:50%;
+    background:  url('expandArrow.svg') no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(90deg);
+    fill: saturate(0%);
+    cursor: pointer;
+    font-size: 0.7em;
+    text-transform: lowercase;
+    /*clip-path: polygon(0% 15%, 15% 0% 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);*/
+    clip-path: polygon(0% 15%, 15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%);  
+}
+
+.expandButtonOpened{
+    transform: rotate(270deg);
+    transition: 1s;
+}
+.expandButtonClosed{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+
+.tableTR{
+background-color: rgb(206, 253, 194) ;
+filter:saturate(10%);
+}
+
+.placeImg{
+    widtH:15px;
+    height: 15px;
+    margin-right: 0.5em;
+}
+
+.tableTROpened{
+    filter:saturate(30%);
+}
+
+.tableTRClosed{
+    filter:saturate(10%);
+}

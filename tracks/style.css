@@ -1,0 +1,102 @@
+body{
+    width: 900px;
+    height: 1080px;
+    margin: 2em auto 0 auto;
+    padding: 0;   
+    font-size: 16px;
+    background-color: rgba(207, 204, 204, 0.151);
+}
+.footerMargin{
+    min-height: 50%;
+}
+.container{   
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 900px;
+    height: 500px;
+    margin: 2em auto auto ;
+    position: relative;
+}
+
+.container div{
+    filter: saturate(0%);
+}
+
+div[class$='Small']{
+    position: absolute;
+    bottom:0;
+    left:0;
+    min-width:100%;
+    min-height: 80%;
+}
+div[class$='evt']{
+    position: absolute;
+    bottom:0;
+    left:0;
+    min-width:100%;
+    min-height: 100%;
+    cursor: pointer;
+}
+div[class$='Name']{
+    font-size: 3em;
+    margin-top: 25px;
+    text-shadow: 2px 2px rgba(26, 19, 19, 0.322);
+}
+
+
+
+
+.whiteSheet{
+    bottom:0;
+    left:0;
+    position:absolute;
+    min-height:80%;
+    min-width:100%;
+    max-height:80%;
+    max-width:100%;
+    clip-path: polygon(9.603% 0%,93.603% 0%, 84% 100%, 0% 100%);  
+    background: transparent;   
+    z-index: -1;
+    
+}
+.trackHeader{
+    width: 300px;
+    margin: 5% 0 auto 15%;
+    font-size: 4em;
+    color:transparent;
+    text-shadow: 0.1em 0.1em transparent ;
+}
+
+.trackDesc {
+    text-align: justify;
+    float:left;
+    width: 70%;
+    margin-left:10%;
+    margin-top: 14%;
+    font-size: 1rem;
+    color:transparent;
+    text-shadow: 2px 2px transparent ;
+}
+
+.trackDescContainer{
+   position: absolute;
+   right: 30%;
+   top: 0;
+   color:transparent;
+}
+.trackDescContainer h2{
+    text-align: left;
+    text-transform: uppercase;
+    color: inherit;
+}
+.trackDescContainer p{
+        font-size: 0.9em;
+    text-align: left;
+
+}
+
+@supports (-moz-float-edge: margin-box)/*check for any mozilla specifiend function that being supported on mobile & desktop firefox versions, to fix gigantic thead block size. 18px is chrome & others size*/
+{
+    thead tr{
+    block-size: 18px;
+    }
+}

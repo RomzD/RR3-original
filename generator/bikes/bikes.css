@@ -1,0 +1,147 @@
+.bikeUpgrade,.bikeStatString,.bike,.bikeName,.displayBike,.bikeList,.bikeStat{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+
+.bikeContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;/*50em*/
+    height: 30.68%;/*22em*/
+    margin-top: 2em;
+
+}
+
+.bikeContainer label{
+    width:55px; /*3.4375em;*/
+    height: 55px; /*3.4375em;*/
+}
+
+.bikeContainer input{
+    display:none;
+
+}
+
+.displayBike{
+    width: 288px;
+    min-width:288px;/*18em*/
+    height: 220px;    /*13.75em;*/
+    border-radius: 25%;
+    overflow: hidden;
+}
+.bikeStat{
+    display:flex;
+    flex-wrap: wrap;
+    width: 512px;/*32em;*/
+    min-width: 512px;/*32em;*/
+    height:220px;    /*13.75em;*/
+}
+
+.bikeList{
+    display:flex;
+    flex-wrap: wrap;
+    min-width:800px;
+    width:  800px;
+    height: 132px;/*8.25em;*/
+}
+
+.bikeName{
+ width:100px; /*6.25em;*/
+ min-width:100px; /*6.25em;*/
+ max-width:100px; /*6.25em;*/
+ height: 66px;/*4.125em;*/
+ min-height: 66px;/*4.125em;*/
+ max-height:66px;/*4.125em;*/
+}
+
+.input_radio_bike{
+    display:none;
+}
+
+.bike{
+    width:100%;
+    height:100%;
+    position:relative;
+    display:flex;
+    align-items:stretch;
+    padding-top:1em;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.bikeStatString{
+    width: 228.5px;/*14.28125em;*/
+    height:55px; /*3.4375em;*/
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+
+    font-weight: bold;
+}
+
+.bikeUpgrade{
+    width: 100%;
+    height: 100%;
+}
+
+.bikeInitSpeedValue,.bikeUpgradedSpeedValue,.bikeInitNitroSpeedValue,.bikeUpgradedNitroSpeedValue {   
+    font-weight: normal;
+    font-size:1em;
+    padding:0;
+    margin:0;
+    opacity:1;
+}
+.spanOpa{
+    opacity: 0;
+}
+
+.bikeList label:nth-of-type(-n+8){
+
+    border-bottom: 3px solid rgb(128, 128, 128);
+}
+
+
+.bikeStar{
+    background:transparent;
+    position:absolute;
+    width: 33%;
+    height:33%;
+    bottom:0;
+    left: 0;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+
+.armor{
+    background: url('../img/svg/armor.svg') ;
+}
+
+.suspension{    
+    background: url('../img/svg/spring.svg') ;
+}
+.performance{
+    background-size:70%;
+    background: url('../img/svg/performance.svg') ;
+}
+.tires{
+    background: url('../img/svg/tires.svg') ;
+}
+
+.armor, .performance, .tires, .suspension{
+    background-size: 55px 55px;
+    border-radius: 1em;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#armor:checked + .armor,
+#performance:checked + .performance,
+#suspension:checked + .suspension,
+#tires:checked + .tires{
+    background-color:  rgb(140, 255, 159);
+}

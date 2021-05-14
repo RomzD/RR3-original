@@ -1,0 +1,66 @@
+article{
+
+    margin-bottom: 1.5em;
+}
+
+.articleParagraph{
+    font-size: 1.1em;
+    padding:0 1em ;
+}
+.articleParagraph::first-letter{
+    padding-left: 1em;
+}
+
+.articleHeader{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-shadow:0.05em 0.05em rgba(8, 7, 7, 0.24);
+
+}
+
+ol{
+    margin: unset;
+    list-style:decimal;
+}
+
+.emulatorDiv{
+    display:flex;
+    float:left;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    height: 4em;
+    margin-bottom: 2em;
+    border: 1px solid black;
+
+}
+
+.emulatorDiv:hover{
+    transition: 1s;
+    background: rgb(135, 255, 99) /*linear-gradient(90deg, white, purple);*/
+}
+
+.emulatorRef, .emulatorRef:visited{
+    
+    text-decoration: none;
+    color:black;
+}
+a {
+    text-decoration: none;
+}
+
+.autoSplitterRef div{
+    float:none;
+    margin: auto;
+}
+.autoSplitterRef div:hover{
+    transition: 1s;
+    background: rgb(178, 68, 206) /*linear-gradient(90deg, white, purple);*/
+}
+
+.emulatorImage{
+    height: 1em;
+    width: 1em;
+    padding-left: 0.2em;
+}

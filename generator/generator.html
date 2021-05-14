@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Password calculator. All cheats on one page!">   
+
+<link rel="icon" href="../logo/roadRashLogo.svg">
+<link rel=”mask-icon” href=”../logo/roadRashLogo.svg” color="#000000">
+<link rel="apple-touch-icon" href="../logo/squareLogo.svg">
+
+<link href="style.css" type="text/css" rel="stylesheet">
+<link href="../font.css" rel="stylesheet">
+<link href="levels/levels.css" type="text/css" rel="stylesheet" >
+<link href="tracks/tracks.css" type="text/css" rel="stylesheet">
+<link href="bikes/bikes.css" type="text/css" rel="stylesheet" >
+<link href="bikes/bikeCssAnimation.css" type="text/css" rel="stylesheet" >
+<link href="../header.css" rel="stylesheet">
+<link href="../footer.css" rel="stylesheet">
+<title>Road Rash 3 antology. Password calculator</title>
+</head>
+<body>
+    <header>             
+        <nav>
+         <div><a  href="../index.html"><span class="navRef"></span></a> BIKES</div>
+         <div><a  href="../tracks/tracks.html"><span class="navRef"></span></a>TRACKS</div>
+         <div><a  href="../hints/hints.html"><span class="navRef"></span></a>HINTS</div>
+         <div><a  href="../speedrun/speedrun.html"><span class="navRef"></span></a>SPEEDRUNNING</div>
+         <div><a  href="generator.html"><span class="navRef"></span></a>PASSWORD CALC</div>
+        </nav>
+       
+</header>
+<div class="footerMargin">
+    <div class="container">
+<form method="get" action="">
+        <div class="levelChoose">
+            <label class="lbl" for="lvl1">
+                <input type="radio" class="radio_level_input" name="levels" id="lvl1" value=1 >
+             <div class="level lvl1" ></div> <span>level 1</span>
+            </label>
+ 
+         <label class="lbl" for="lvl2">
+            <input type="radio" class="radio_level_input" name="levels" id="lvl2" value=2 >
+            <div class="level lvl2"></div><span>level 2</span>
+        </label>
+
+            <label class="lbl" for="lvl3">
+            <input type="radio" class="radio_level_input"  name="levels" id="lvl3" value=3 >
+            <div class="level lvl3"></div><span>level 3</span>
+        </label>
+
+            <label class="lbl" for="lvl4">
+            <input type="radio" class="radio_level_input" name="levels" id="lvl4" value=4 >
+            <div class="level lvl4"></div><span>level 4</span>
+        </label>
+
+            <label class="lbl" for="lvl5">
+            <input type="radio" class="radio_level_input"  name="levels" id="lvl5" value=5 >
+            <div class="level lvl5"></div><span>level 5</span>
+        </label>
+        </div>
+        <!--end of level divs-->
+        <div class="trackContainer">
+            <div class="tracks"></div>
+
+        </div>
+
+        <div class="bikeContainer">
+            <div class="displayBike"></div>
+            <div class="bikeStat">
+                <div class="bikeStatString">initial speed</div>
+                <div class="bikeStatString"><span>upgraded speed</span></div>
+                <label for="tires">  
+                    <input type="checkbox" id="tires" value=8/>
+                    <div class="bikeUpgrade tires"></div>
+                </label>
+                <div class="bikeStatString bikeInitSpeedValue">1</div>
+                <div class="bikeStatString bikeUpgradedSpeedValue">1</div>
+            
+            <label for="performance"> 
+                <input type="checkbox" id="performance" value=1/>
+                <div class="bikeUpgrade performance" ></div>
+            </label>
+                <div class="bikeStatString">initial nitro speed</div>
+                <div class="bikeStatString">upgraded nitro speed</div>
+            <label for="armor">  
+                <input type="checkbox" id="armor" value=16/>
+                <div class="bikeUpgrade armor"></div>
+            </label>
+                <div class="bikeStatString bikeInitNitroSpeedValue">2</div>
+                <div class="bikeStatString bikeUpgradedNitroSpeedValue">2</div>
+            <label for="suspension">   
+                <input type="checkbox" id="suspension" value=1/>
+                <div class="bikeUpgrade suspension"></div>
+            </label>
+            </div>
+            <div class="bikeList">
+             <!--<lable class="bikeName" for="Perro 125">
+                    <input type="radio" class="input_radio_bike" name="bikeName" id="Perro 125" value=1>
+                    <div class="bike">1</div>USD x $10
+                </lable>-->
+            </div>
+        </div><!--bikeContainer end-->
+        <div class="moneyPassContainer">
+          <div class="money">
+            <label for="money"></label>
+            <input type="number" autocomplete="off" step=1  id="money" name="moneyInput" min=0 placeholder="money x10" max=65535>
+
+          </div>  <div class="passDiv"><div class="passwordLogo"></div><p class="pass"></p></div> 
+        </div><!--moneyPassContainer end-->
+    </div>  <!--cointainer end-->
+ 
+</form>
+</div>
+<footer>
+      
+    <div><a  href="../footer/what's next/whatsnext.html"><span class="navRef"></span></a>what's next</div>    
+    <div><a  href="../footer/contribute/contribute.html"><span class="navRef"></span></a>contribute</div>
+    <div><a  href="../footer/about-contact/contacts.html"><span class="navRef"></span></a>contacts</div> 
+
+</footer>
+</div> 
+    <script src="../bikesFormObjects.js"></script>
+    <script src="bikes/loadBikeInfo.js"></script>
+    <script src="bikes/fillBikeList.js"></script>   
+    <script src="tracks/loadTracks.js"></script>
+    <script src="tracks/trackAnimations.js"></script>
+    <script src="tracks/formObjects.js"></script>
+    <script src="password.js"></script>
+    <script src="tracks/setEvents.js"></script>   
+    <script src="main.js" ></script>
+
+</body>
+
+</html>

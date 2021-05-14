@@ -1,0 +1,65 @@
+header{
+    width: 100%;
+    height: 10%;
+    position: relative;
+
+}
+
+nav{
+    width:100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.856);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 3px solid rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(0, 0, 0);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%); 
+}
+
+nav div{
+    box-sizing: border-box;
+    width: 33%;
+    height: 50%;
+    background: rgb(255, 254, 251);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(7% 0%, 100% 0%, 93% 100%, 0% 100%);
+    font-size: 1.2em;
+    text-shadow: 0.05em 0.1em rgba(12, 1, 1, 0.219);
+    position:relative;
+}
+nav div:nth-of-type(-n+3){
+    border-bottom: 3px solid black;;
+
+}
+
+.navRef{
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+  
+    z-index: 1;
+  
+}
+
+
+
+/*
+.helmet{
+    position:absolute;
+    top:0;
+    right:0;
+    width:150px;
+    height:163px;
+    background-image: url('img/chequeredFlag.png') ;
+    background-repeat: no-repeat;
+    transform:translate(125px, -25px);
+    z-index: -1;
+}*/

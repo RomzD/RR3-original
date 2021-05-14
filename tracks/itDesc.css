@@ -1,0 +1,16 @@
+.itDesc{
+
+    background: linear-gradient(90deg, rgba(252, 241, 88, 0.986), rgb(242, 252, 111));  
+   /* clip-path: polygon(0% 20%, 103.961px 20%,14.29% 0%, 34.29% 0%, 285.961px 20%, 100% 20%,85.71% 100%, 0% 100%);  */
+   clip-path: polygon(24% 0%, 36% 0%, 24% 100%, 12% 100%);
+}
+
+.itDescSmall{
+    background: linear-gradient(90deg, rgba(252, 241, 88, 0.986), rgb(242, 252, 111));  
+    clip-path: polygon(21.603% 0%, 33.603% 0%, 24% 100%, 12% 100%); /* +14.29  */
+}
+
+.itName{
+    margin-left: 26%;
+}
+

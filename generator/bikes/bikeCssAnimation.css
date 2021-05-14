@@ -1,0 +1,65 @@
+
+.animateRat{
+    animation-name: rat;
+    animation-duration: 2s;;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+.animateSport{
+    animation-name: sport;
+    animation-duration: 2s;;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.animateSuper{
+    animation-name: super;
+    animation-duration: 2s;;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.animateWild{
+    animation-name: wild;
+    animation-duration: 2s;;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rat{
+from{
+background-color:transparent;
+}
+to{
+background-color:rgba(253, 23, 23, 0.7);
+}
+}
+
+@keyframes sport{
+    from{
+        background-color:transparent;
+        }
+        to{
+        background-color:rgba(10, 255, 10, 0.7);
+        }
+}
+
+@keyframes super{
+    from{
+        background-color:transparent;
+        }
+        to{
+        background-color:rgba(255, 56, 205, 0.7);
+        }
+}
+
+@keyframes wild {
+    from{
+        background-color:transparent;
+        }
+        to{
+        background-color:rgba(9, 4, 248, 0.7);
+        }
+}

@@ -1,0 +1,15 @@
+.ukDesc{
+    background: linear-gradient(90deg, rgba(41, 177, 64, 0.986), rgb(91, 199, 41));  
+    clip-path: polygon(60% 0%, 72% 0%, 60% 100%, 48% 100%);/* 42.87 +14,29= */
+}
+
+.ukDescSmall{
+    background: linear-gradient(90deg, rgba(41, 177, 64, 0.986), rgb(91, 199, 41));  
+    clip-path: polygon(57.603% 0%, 69.603% 0%, 60% 100%, 48% 100%)
+
+}
+
+
+.ukName{
+    margin-left: 61%;
+}

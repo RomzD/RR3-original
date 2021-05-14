@@ -1,0 +1,52 @@
+@font-face{
+    font-family: 'Square Sans-serif 7';
+    src: url('fonts/square_sans_serif_7.ttf');
+}
+@font-face{
+    font-family: 'Squared display';
+    src: url('fonts/Squared Display.ttf');
+}
+
+.number{
+    font-family: 'Square Sans-serif 7';
+    color:rgb(21, 155, 81);
+    text-shadow: 0.05em 0.05em rgb(255, 255, 255);
+    font-size: 2em;
+    text-align: center;
+}
+
+.bikeGameSpecContainer{
+    font-size: 1em;
+    /*text-shadow: 0.05em 0.05em rgb(0, 0, 0);*/
+}
+
+.gameSpecLoaded{
+    font-size: 1.2em;
+   
+}
+
+.statNameSmall{
+    font-size: 1em;
+  /*text-shadow: 0.05em 0.05em rgb(0, 0, 0);*/
+}
+.statName{
+    text-align: center;
+    font-size: 1.2em;
+    text-shadow: 0.05em 0.05em rgba(0, 0, 0, 0.432);
+    text-transform: uppercase;
+}
+
+.performance,
+.tires,
+.suspension,
+.armor{
+    font-size: 1.2em;
+    text-align: center;
+}
+.performanceNote,
+.suspensionNote,
+.armorNote,
+.tiresNote{
+text-align: left;
+font-size:1.1em;
+}

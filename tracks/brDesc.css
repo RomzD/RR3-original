@@ -1,0 +1,14 @@
+.brDesc{
+   /* background: linear-gradient(90deg, green, lightGreen);  */
+   background: linear-gradient(90deg, rgb(99, 243, 99), rgb(146, 243, 146));  
+    clip-path: polygon(12% 0%, 24% 0%, 12% 100%, 0% 100%);
+}
+
+.brName{
+    margin-left: 13%;
+}
+
+.brDescSmall{  
+    background: linear-gradient(90deg, rgb(99, 243, 99), rgb(146, 243, 146));  
+    clip-path: polygon(9.603% 0%, 21.603% 0%, 12% 100%, 0% 100%);
+}

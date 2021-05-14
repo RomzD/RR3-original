@@ -1,0 +1,14 @@
+.knDesc{
+    background: linear-gradient(90deg, rgba(241, 241, 150, 0.986), rgb(237, 241, 180));  
+    clip-path: polygon(48% 0%, 60% 0%, 48% 100%, 36% 100%);
+}
+
+.knDescSmall{
+    background: linear-gradient(90deg, rgba(241, 241, 150, 0.986), rgb(237, 241, 180));  
+    clip-path: polygon(45.603% 0%, 57.603% 0%, 48% 100%, 36% 100%)
+
+}
+
+.knName{
+    margin-left:49%;
+}

@@ -1,0 +1,23 @@
+.grDesc{
+    position: absolute;
+    bottom:0;
+    left:0;
+    min-width:100%;
+    min-height: 100%;
+    background: linear-gradient(90deg, rgb(233, 233, 220), rgb(179, 232, 245));  
+    clip-path: polygon(36% 0%, 48% 0%, 36% 100%, 24% 100%);
+}
+
+.grDescSmall{
+    position: absolute;
+    bottom:0;
+    left:0;
+    min-width:100%;
+    min-height: 80%;
+    background: linear-gradient(90deg, rgb(233, 233, 220), rgb(179, 232, 245));  
+    clip-path: polygon(33.603% 0%, 45.603% 0%, 36% 100%, 24% 100%)
+}
+
+.grName{
+    margin-left: 35.3%;
+}

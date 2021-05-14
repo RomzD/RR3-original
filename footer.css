@@ -1,0 +1,38 @@
+footer{
+    box-sizing: border-box;
+    position:relative;
+    display:flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-top: 1%;
+    width: 900px;
+    height: 54px;
+    margin-bottom: 1em;
+   
+
+   /* clip-path: polygon(0% 0%, 93% 0%, 100% 100%, 7% 100%);*/
+    border: 1px solid black;
+    font-size: 1.5em;
+    text-shadow: 0.05em 0.1em rgba(12, 1, 1, 0.219);
+    background: rgb(0, 0, 0);    
+}
+
+footer div {
+    box-sizing: border-box;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25%;
+    height: 100%;
+
+    clip-path: polygon(0% 0%, 86% 0%, 100% 100%, 14% 100%);
+
+    font-size: 1em;
+    text-shadow: 0.05em 0.1em rgba(12, 1, 1, 0.219);
+    background: rgb(255, 254, 251);
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+
+}
