@@ -34,7 +34,7 @@ div .cat:nth-child(4){
 
 .bikeDescription{
     grid-column: 3/13;
-    grid-row: 4/6;
+    grid-row: 4/span 1;
 }
 .categories{
     grid-column: 3/13;
@@ -127,4 +127,7 @@ div .cat:nth-child(4){
         grid-column: 2/span 1;
     }
     
-    
+    .comparisonButton{
+        grid-column: 5/13;
+        grid-row: 5/span 1;
+    }
