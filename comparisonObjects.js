@@ -29,15 +29,15 @@ var containers = [];
 containers.push(document.querySelector('.comparisonOneContainer'));
 containers.push(document.querySelector('.comparisonTwoContainer'));
 
-containers.forEach(element=> loadComparison(element));
+containers.forEach(element=> loadComparison(element, containers.indexOf(element)+1));
 
 }
 loadComparisons();//to redefine in other file
 
-function loadComparison(container){
+function loadComparison(container,index){
     console.log('im in comparisons, bikeObjects length is ' + bikeObjects.bike.length);
     for(let i=0;i<bikeObjects.bike.length; i++){
-    
+    var colIndClass = index===1 ? ' One' :' Two'
     var bike = bikeObjects.bike;
 
     var comparisonInnerContainer = document.createElement('div');
@@ -56,21 +56,21 @@ function loadComparison(container){
     var compSuspension = document.createElement('div');
     var compArmor = document.createElement('div');
 
-    comparisonInnerContainer.className='comparisonInnerContainer';
-    marginDiv.className='marginDiv';
-    comparisonWrapper.className='comparisonWrapper';
-    compBikeImage.className='compBikeImage';
-    compBikeName.className='compBikeName';
-    compPrice.className='compPrice';
-    compInitSpeed.className='compInitSpeed';
-    compUpgradedSpeed.className='compUpgradedSpeed';
-    compInitNitroSpeed.className='compInitNitroSpeed';
-    compUpgradedNitroSpeed.className='compUpgradedNitroSpeed';
-    compNitroCharge.className='compNitroCharge';
-    compPerformance.className='compPerformance';
-    compTires.className='compTires';
-    compSuspension.className='compSuspension';
-    compArmor.className='compArmor';
+    comparisonInnerContainer.className='comparisonInnerContainer' + colIndClass;
+    marginDiv.className='marginDiv'  + colIndClass;
+    comparisonWrapper.className='comparisonWrapper' + colIndClass;
+    compBikeImage.className='compBikeImage' + colIndClass;
+    compBikeName.className='compBikeName' + colIndClass;
+    compPrice.className='compPrice' + colIndClass;
+    compInitSpeed.className='compInitSpeed' + colIndClass;
+    compUpgradedSpeed.className='compUpgradedSpeed' + colIndClass;
+    compInitNitroSpeed.className='compInitNitroSpeed' + colIndClass;
+    compUpgradedNitroSpeed.className='compUpgradedNitroSpeed' + colIndClass;
+    compNitroCharge.className='compNitroCharge' + colIndClass;
+    compPerformance.className='compPerformance' + colIndClass;
+    compTires.className='compTires' + colIndClass;
+    compSuspension.className='compSuspension' + colIndClass;
+    compArmor.className='compArmor' + colIndClass;
 
     compBikeImage.style.background= 'url(\''+bike[i].pic+'\')';
     compBikeName.textContent=bike[i].name;
