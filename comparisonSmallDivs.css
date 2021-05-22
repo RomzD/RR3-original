@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'bad-boys';
+    src: url('tracks/Bad\ Boys.ttf');
+}
+.resultHead, .statHead
+{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-family: 'bad-boys';
+    text-align: center;
+    font-size: 2rem;
+    height: 220px;
+}
+/*
+.resultHead{
+    height: 259.98px;
+}*/
+
+.compBikeName,
+.compPrice,
+.compInitSpeed,
+.compUpgradedSpeed,
+.compInitNitroSpeed,
+.compUpgradedNitroSpeed,
+.compNitroCharge,
+.compPerformance,
+.compSuspension,
+.compTires,
+.compArmor,
+.compInitSpeedDesc,
+.compUpgradedSpeedDesc,
+.compInitNitroSpeedDesc,
+.compUpgradedNitroSpeedDesc,
+.compBikeNameDesc,
+.spacer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 39.98px;
+    text-align: center;
+    position: relative;
+}
+
+.spacer{
+    flex:1;
+    box-sizing: border-box;
+}
+
+.compInitSpeed,
+.compUpgradedSpeed,
+.compInitNitroSpeed,
+.compUpgradedNitroSpeed,
+.compSpeed,
+.compNitro{
+    font-family: 'Square Sans-serif 7';
+    font-size: 1.3rem;
+    color: darkgreen;
+}
+ .arrowDiv{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    transition: 0.5s;
+    clip-path: polygon(20% 34%, 20% 46%, 100% 46%, 100% 55%, 20% 55%, 20% 66%, 0% 50%);
+}
+.arrowDivUp{
+transform: rotate(90deg);
+background-color: green;
+}
+.arrowDivDown{
+transform: rotate(-90deg);
+background-color: red;
+}
+.arrowDivEven{
+background-color: transparent;
+}
+.arrowDivUpMoney{
+    transform: rotate(90deg);
+    background-color: red;
+}
+.arrowDivDownMoney{
+    transform: rotate(-90deg);
+    background-color: green;
+}
+
+.comparisonStatName .comparisonWrapper > div:not(.statHead) {
+        font-weight: bold;
+        font-size: 0.9rem;
+}
+
+.compBikeName{
+        font-size: 1.7rem;
+}
+
+.comparisonWrapper .compMoney, .comparisonWrapper .compMoney,.One, .Two{    
+
+   letter-spacing: 1px;
+   font-size: 1.2rem;
+}
+
+.statHeadInfo{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    left:40%;
+    height: 20%;
+    min-height: 20%;
+    width: 35%;
+    background-color: rgba(0, 0, 0, 0.699);
+    border-radius: 50%;
+    cursor:default;
+    
+}
+.infoSpan{
+    display: block;
+    font-size: 2rem;
+    padding-top: 0.3rem;
+    color: yellow;
+}
+
+.infoButton{
+    position: absolute;
+    box-sizing: border-box;
+    top:10%;
+    left:35%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding-top: 5px;
+    color: yellow;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.753);
+}
+
+.infoContainer{
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+    opacity: 0;
+    width: 90%;
+    height:90%;
+    top: 5%;
+    left:5%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.897);
+    padding: 20px;
+    color:white;
+    z-index: 3;
+    border-radius: 20px;
+}
+.infoContainer h3{
+    font-family: 'bad-boys';
+    letter-spacing: 0.2rem;
+    text-shadow: 0.1rem 0.1rem grey;
+    margin: 5% auto 0;
+    padding-bottom: 70px;
+    font-size: 6rem;
+    text-align: center;
+}
+.infoContainer p{
+    text-align: justify;
+    font-size: 1.3rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.paddingSpan{
+    padding-left: 1.2rem;
+}
+
+.closeInfoContainer{
+    position: absolute;
+    top:3%;
+    right:3%;
+    width: 30px;
+    height: 30px;
+    color: rgb(218, 218, 218);
+    font-size: 2rem;
+}
+.closeInfoContainer:hover{
+    color: red;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.colorSpanRed{
+    color:red; 
+}
+.colorSpanGreen{
+    color: green;
+}

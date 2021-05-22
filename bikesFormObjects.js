@@ -10,7 +10,7 @@ var bikes = [
     ['sport','Diablo 750','$13790','90','440','142/143','150/151','none','none','$3440','$1000','$680','$1370','Blazing speed and sharp handling devastate the competition.',0,9,10],
     ['sport', 'DMG 1000','$16870','120','515','152/153','159/160','none','none','$4210','$1000','$840','$1680','A reliable heavyweight for the Rasher who likes to brawl.',0,10,11],
     ['super','Corsair 600 N','$18990','100','430','146/147','154/155','165/167','173/175','$4740','$1000','$940','$1890','Nitro and a fishy frame make it hard to hold a line at speed.',4,11,12],
-    ['super','Kamakazi 750 N','$21780','120','520','149/150','157/158','168/170','177/179','$5440','$1000','$1080','$2170','A quick steerer with a fram that begs the stress of nitro.',6,12,13],
+    ['super','Kamakazi 750 N','$21780','120','520','149/150','157/158','168/170','177/179','$5440','$1000','$1080','$2170','A quick steerer with a frame that begs the stress of nitro.',6,12,13],
     ['super','Banzai 750 1100','$29990','140','450','163/165','172/173','none','none','$7490','$1000','$1490','$2990','Middleweight on steroids, an 1100 stuffed into a 750 chasis.',0,13,14],
     ['super','Stiletto 900 N','$34880','140','490','157/158','165/166','178/179','186/188','$8720','$1000','$1740','$3480','An ultra-light 900 with nitrous muscle, it takes a steady hand.',6,14,15],
     ['super','Diablo 1000 N','$40000','160','490','160/162','169/170','181/183','190/192','$10000','$1000','$2000','$3990','The most monstrous production bike ever to rule the road.',8,15,16],

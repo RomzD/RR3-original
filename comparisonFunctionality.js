@@ -1,16 +1,15 @@
 
 function calculateSummary(){//uses activeBikes global object from comparisonObjects.js
 
-    var comparisonWrapper = document.querySelectorAll('.comparisonResult .comparisonWrapper div:nth-child(n+2)');//contains divs with comparison information; divs with needed data start from 2 index div(not 0)
+    var comparisonWrapper = document.querySelectorAll('.comparisonResult .comparisonWrapper div:not(.spacer) span');//contains spans  with comparison information; divs with needed data start from 2 index div(not 0)
+    var comparisonDivs = document.querySelectorAll('.comparisonResult .comparisonWrapper > div:not(.resultHead,.spacer)');// divs, to append styles with styleResult()
     var bike1 = bikeObjects.bike.find(element=>element.bikeNumber===activeBikes[0]);
     var bike2 = bikeObjects.bike.find(element=>element.bikeNumber===activeBikes[1]);
-  //  console.log('im in calculateSummary')
     for(var i=0;i<comparisonWrapper.length;i++)
-    { //console.log('im in calculateSummary loop, compWrapper.')
+    { 
         switch (i) {
         case 0:
             comparisonWrapper[i].textContent= bike2.price.slice(1) - bike1.price.slice(1);//set price difference
-            console.log(bike2.price.slice(1) + ' '+  bike1.price.slice(1));
             break;
         case 1:
             comparisonWrapper[i].textContent=bike2.initSpeed.slice(4) - bike1.initSpeed.slice(4);//non-upgraded speed
@@ -41,12 +40,11 @@ function calculateSummary(){//uses activeBikes global object from comparisonObje
             break;        
         }
     }   
+    styleResults(comparisonDivs);
 }
-calculateSummary(); //redefine in other file later
-//end of calculate summary
+
 
 function scrollDiv(e,isButton){  
-  //  console.log('im in wheel, e.target.className is ' + e.target.className);
     wheelRotateCount= isButton===true ? 3: wheelRotateCount;
     if(wheelRotateCount<3)
     {
@@ -54,23 +52,15 @@ function scrollDiv(e,isButton){
         return;
     }
 
- //   console.log('im after if');
     wheelRotateCount=0;
-   // var scrollersParentNode= document.querySelector('.'+e.target.parentNode.parentNode.parentNode.className);//container comparisonOneContainer or comparisonTwoContainer
-   // var scrollersInnerContainer =document.querySelector('.'+e.target.parentNode.parentNode.className); 
-  //  var scrollerDiv = document.querySelector('.'+scrollersParentNode.className + ' .'+ scrollersInnerContainer.className);//select innerContainer from proper parent
- // console.log('scrollerDiv is '+scrollerDiv.className +' , parent is' + scrollersParentNode.className + ' , scrollerInnerContainer ' + scrollersInnerContainer.className);
     var scrollerDiv=e.target.classList.contains('One')? document.querySelector('.comparisonOneContainer') : document.querySelector('.comparisonTwoContainer') ;
-    
-   // console.log('e.target.className.slice(e.target.className.length-3,3) is ' + e.target.className);   
 
     var currentPosition = scrollerDiv.style.top === '' ? 0 : scrollerDiv.style.top.slice(0, scrollerDiv.style.top.length-1);
    
     currentPosition=Number(currentPosition);
-     var customDeltaY = e.deltaY> 0 ? 100: -100; //for firefox, which sets each scroll with 57 px amount
-    //console.log('e.deltaY after change'+ e.deltaY);//deltaY changed for customDelta , as all deltaY after
+    var customDeltaY = e.deltaY> 0 ? 100: -100; //for firefox, which sets each scroll with 57 px amount
     var whereToScroll= Number(currentPosition) + customDeltaY;
-  //  console.log('outer currentPosition is '+currentPosition + ' , outer whereToScroll is ' + whereToScroll + ' , e.deltaY is ' +e.deltaY);
+
     if (
         !(currentPosition===0 && e.deltaY >0)      &&
         !(currentPosition===-1500 && e.deltaY<0)//no need to change to custo delta
@@ -79,12 +69,55 @@ function scrollDiv(e,isButton){
         var activeBike= scrollerDiv.className ==='comparisonTwoContainer' ? 1: 0;
         activeBikes[activeBike]= e.deltaY> 0 ? --activeBikes[activeBike] : ++activeBikes[activeBike];//change active bike;
         activeBikes[activeBike] = activeBikes[activeBike]===0? activeBikes[activeBike]+1 : activeBikes[activeBike]===17? activeBikes[activeBike]-1 : activeBikes[activeBike];//fix array bounds
-     
-       // whereToScroll= e.deltaY>0 ?  whereToScroll+100 : whereToScroll-100;
-       calculateSummary();
-       // console.log('inner whereToScroll is ' + whereToScroll + ' , e.deltaY is ' + e.deltaY + ' , activeBike is ' + activeBike + ' , activeBikes[activeBike] is '+ activeBikes[activeBike]);
-        scrollerDiv.style.top = whereToScroll+'%';
-        
+
+        calculateSummary();
+        scrollerDiv.style.top = whereToScroll+'%';        
     }
+}
+
+
+function changeComparisonBikes(e){
+    var choseBike = bikeObjects.bike.find(element=> element.name===e.target.textContent);    
+    var comparisonDivs = document.querySelectorAll('.comparisonOneContainer, .comparisonTwoContainer');
+
+    var currBikeNum =choseBike.bikeNumber;
+    var compareTo = choseBike.betterBike;
+    var currCat = choseBike.cat;
+    
+    activeBikes[0]=currBikeNum;
+    activeBikes[1]=compareTo;
+  
+     comparisonDivs.forEach(element=> {
+     var top= element.classList.contains('comparisonOneContainer') ? ((Number(activeBikes[0])) -1)*-100 : ((Number(activeBikes[1])) -1)*-100;
+     element.style.top= top+'%';
+    });
+
+    calculateSummary();
+    changeCompButtonStyle(currCat);
+}
+
+function styleResults(resultWrapper){
+
+    resultWrapper.forEach(element=>{element
+        var arrowDiv = element.lastElementChild;
+        var calcResult = Number(element.firstElementChild.textContent) > 0 ? '+' : Number(element.firstElementChild.textContent)< 0 ? '-' : '0' ;
+        isMoney =  element.classList.contains('compMoney') ? true: false;
+      
+        if (isMoney){
+            arrowDiv.className= calcResult ==='+' ? 'arrowDiv arrowDivUpMoney' : calcResult ==='-' ? 'arrowDiv arrowDivDownMoney' : 'arrowDiv arrowDivEven';
+        }
+        else {
+            arrowDiv.className= calcResult ==='+' ? 'arrowDiv arrowDivUp' : calcResult ==='-' ? 'arrowDiv arrowDivDown' : 'arrowDiv arrowDivEven';
+        }
+
+    });
+}
+
+function changeCompButtonStyle(currCat){
+ //   var pseudoDiv = document.querySelector('.compPseudo');
+    var compButtonDiv = document.querySelector('.comparisonButton');
+    var prop = currCat==='rat' ?'rgba(253, 23, 23, 0.7)' : currCat=== 'sport' ? 'rgba(10, 255, 10, 0.7)' : currCat==='super' ? 'rgba(255, 56, 205, 0.7)' : 'rgba(9, 4, 248, 0.7)';
+    compButtonDiv.style.setProperty('--boxShadow-color', prop);
+ //   pseudoDiv.className = 'compPseudo '+currCat + 'Comp';
 
 }

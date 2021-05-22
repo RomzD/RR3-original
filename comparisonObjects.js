@@ -10,9 +10,9 @@ function animationObject(name, className ,keyFrames, settingsForward, settingsBa
 }
 
 var keyFramesArray=[
-    [ "comparisonContaierRollOut",  '.comparisonContaier' , [{left: '101%'},{left: '0'}], {duration: 2000, fill:'forwards'}, {duration: 2000, fill:'forwards', direction: 'reverse'}, 0, state="ready" ],
-    [ "comparisonButtonHeight", '.comparisonButton' , [{height: '50%'},{height: '100%'}], {duration: 2000, fill:'forwards'}, {duration: 2000, fill:'forwards', direction: 'reverse'}, 0, state="ready" ],
-    [ "comparisonSubstrate",  '.comparisonSubstrate', [{opacity: 0},{opacity: 1}], {duration: 4000, fill:'forwards'}, {duration: 4000, fill:'forwards', direction: 'reverse'}, 0, state="ready" ]
+    [ "comparisonContaierRollOut",  '.comparisonContaier' , [{left: '101%'},{left: '0'}], {duration: 1000, fill:'forwards' , easing: ' ease-in-out'}, {duration: 1000, fill:'forwards', direction: 'reverse', easing: ' ease-in-out'}, 0, state="ready" ],
+    [ "comparisonRollIn", '.comparisonButton' , [{height: '50%'},{height: '100%'}], {duration: 1000, fill:'forwards', easing: ' ease-in-out'}, {duration: 1000, fill:'forwards', direction: 'reverse', easing: ' ease-in-out'}, 0, state="ready" ],
+    [ "comparisonSubstrate",  '.comparisonSubstrate', [{opacity: 0},{opacity: 1}], {duration: 2000, fill:'forwards'}, {duration: 2000, fill:'forwards', direction: 'reverse'}, 0, state="ready" ]
 ]
 var animationsArray=[];
 keyFramesArray.forEach(element=>
@@ -35,7 +35,6 @@ containers.forEach(element=> loadComparison(element, containers.indexOf(element)
 loadComparisons();//to redefine in other file
 
 function loadComparison(container,index){
-    console.log('im in comparisons, bikeObjects length is ' + bikeObjects.bike.length);
     for(let i=0;i<bikeObjects.bike.length; i++){
     var colIndClass = index===1 ? ' One' :' Two'
     var bike = bikeObjects.bike;
@@ -63,10 +62,10 @@ function loadComparison(container,index){
     compBikeName.className='compBikeName' + colIndClass;
     compPrice.className='compPrice' + colIndClass;
     compInitSpeed.className='compInitSpeed' + colIndClass;
-    compUpgradedSpeed.className='compUpgradedSpeed' + colIndClass;
-    compInitNitroSpeed.className='compInitNitroSpeed' + colIndClass;
+    compUpgradedSpeed.className='compUpgradedSpeed ' + colIndClass;
+    compInitNitroSpeed.className='compInitNitroSpeed ' + colIndClass;
     compUpgradedNitroSpeed.className='compUpgradedNitroSpeed' + colIndClass;
-    compNitroCharge.className='compNitroCharge' + colIndClass;
+    compNitroCharge.className='compNitroCharge compNitro' + colIndClass;
     compPerformance.className='compPerformance' + colIndClass;
     compTires.className='compTires' + colIndClass;
     compSuspension.className='compSuspension' + colIndClass;
@@ -102,4 +101,10 @@ function loadComparison(container,index){
     comparisonInnerContainer.appendChild(comparisonWrapper);
     container.appendChild(comparisonInnerContainer);
     }
+}
+///end of comparison slider objects
+
+var infoContainer ={
+    elem  : document.querySelector('.infoContainer'),
+    status  : 'closed'
 }

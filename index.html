@@ -11,6 +11,7 @@
     <link rel="apple-touch-icon" href="logo/squareLogo.svg">
 
     <link href="comparison.css" rel="stylesheet">
+    <link href="comparisonSmallDivs.css" rel="stylesheet">
     <link href="styles.css" type="text/css" rel="stylesheet" />
     <link href="font.css" type="text/css" rel="stylesheet" />
     <link href="nitro.css" type="text/css" rel="stylesheet"/>
@@ -18,7 +19,7 @@
     <link href="grids.css" type="text/css" rel="stylesheet"/>
     <link href="header.css" type="text/css" rel="stylesheet"/>
     <link href="footer.css" type="text/css" rel="stylesheet"/>
-    <title>Road Rash 3 antology</title>
+    <title>Road Rash 3 anthology</title>
 <body>
     <header>
                <nav >
@@ -78,32 +79,52 @@
                 <div class="armorNote statNameSmall">Protection</div>
             </article>
             <div class="comparisonButton">
-                <p class="comparisonName">compare bikes</p>                               
+                <p class="comparisonName">compare bikes 
+                </p>
+                <div class="compPseudo">  &#8646;                  
+                </div>                               
             </div>
             <div class="comparisonContaier">
-                <div class="topButtonContainer">
+                <div class="infoContainer">
+                    <div class="closeInfoContainer">
+                        X
+                    </div>
+                    <h3>INFO</h3>
+                    <p> <span class="paddingSpan">You</span> can use either mouse wheel or buttons on bottom & top of each slider for scrolling.</br>
+                    <span class="paddingSpan">Right</span> bike2 is compared to left bike1. Comparison results are displayed in the most right column.</br>
+                    <span class="paddingSpan">Arrow</span> points upward if bike2' value is bigger than bike1'. If value is worse, arrow becomes <span class="colorSpanRed">red</span>, if good - <span class="colorSpanGreen">green</span>.</br>
+                    <span class="paddingSpan">For</span> example, if right bike is more expensive, arrow will point upward & become red. Because if the bike is more expensive, value is bigger, but it's harder to buy it. Simple as that. </br>
+                    <span class="paddingSpan">Every</span> time you change bike in main menu, it becomes left active bike in comparison menu. Right active bike automatically being switched to next more expensive bike to left active one.</br>
+                    <span class="paddingSpan">To</span>  exit comparison menu, just click wherever outside of comparison menu window.                 
+                    </p>
+                </div>
+                <div class="topButtonContainer">                   
                     <div class="buttonSpaceFiller1"></div>
-                    <div class="buttonScrollTop One"></div>
-                    <div class="buttonScrollTop Two"></div>
+                    <div class="buttonScrollTop One"><span></span></div>
+                    <div class="buttonScrollTop Two"><span></span></div>
                     <div class="buttonSpaceFiller2"></div>
                 </div>
                 <div class="bottomButtonContainer">
                     <div class="buttonSpaceFiller1"></div>
-                    <div class="buttonScrollDown One"></div>
-                    <div class="buttonScrollDown Two"></div>
+                    <div class="buttonScrollDown One"><span></span></div>
+                    <div class="buttonScrollDown Two"><span></span></div>
                     <div class="buttonSpaceFiller2"></div>
                 </div>
                 <div class="comparisonStatName">
                     <div class="comparisonInnerContainer">    
                     <div class="marginDiv"> </div>
                     <div class="comparisonWrapper">
-                        <div class="compBikeImage"><p> attribute </p></div>
-                        <div class="compBikeName"><p>bike name</p></div>
+                        <div class="statHead">    
+                            <div class="infoButton">
+                                i
+                             </div>                                                  
+                            <p> attribute </p></div>                       
+                        <div class="compBikeNameDesc"><p>bike name</p></div>
                         <div class="compPrice"><p>price</p></div>
-                        <div class="compInitSpeed"><p>init speed</p></div>
-                        <div class="compUpgradedSpeed"><p>upgraded speed</p></div>
-                        <div class="compInitNitroSpeed"><p>init nitro speed</p></div>
-                        <div class="compUpgradedNitroSpeed"><p>upgraded nitro speed</p></div>
+                        <div class="compInitSpeedDesc"><p>init speed</p></div>
+                        <div class="compUpgradedSpeedDesc"><p>upgraded speed</p></div>
+                        <div class="compInitNitroSpeedDesc"><p>init nitro speed</p></div>
+                        <div class="compUpgradedNitroSpeedDesc"><p>upgraded nitro </p></div>
                         <div class="compNitroCharge"><p>charges</p></div>
                         <div class="compPerformance"><p>perfrormance</p></div>
                         <div class="compTires"><p>tires</p></div>
@@ -160,17 +181,49 @@
                     <div class="comparisonInnerContainer">    
                     <div class="marginDiv"> </div>
                     <div class="comparisonWrapper">
-                        <div class="resultHead"><p>comparison summary</p></div>
-                        <div class="compPrice"></div>
-                        <div class="compInitSpeed"></div>
-                        <div class="compUpgradedSpeed"></div>
-                        <div class="compInitNitroSpeed"></div>
-                        <div class="compUpgradedNitroSpeed"></div>
-                        <div class="compNitroCharge"></div>
-                        <div class="compPerformance"></div>
-                        <div class="compTires"></div>
-                        <div class="compSuspension"></div>
-                        <div class="compArmor"></div>
+                        <div class="resultHead"><p>summary</p>
+                           </div> 
+                           <div class="spacer"></div>                                           
+                        <div class="compPrice compMoney">
+                           <span></span>
+                           <div class="arrowDiv"> </div>
+                        </div>
+                        <div class="compInitSpeedDesc compSpeed">
+                            <span></span>
+                           <div class="arrowDiv"> </div>
+                        </div>
+                        <div class="compUpgradedSpeedDesc compSpeed">
+                            <span></span>
+                           <div class="arrowDiv"> </div>
+                        </div>
+                        <div class="compInitNitroSpeedDesc compSpeed">
+                            <span></span>
+                           <div class="arrowDiv"> </div>
+                        </div>
+                        <div class="compUpgradedNitroSpeedDesc compSpeed">
+                            <span></span>
+                           <div class="arrowDiv"> </div>
+                        </div>
+                        <div class="compNitroCharge compSpeed">
+                            <span></span>
+                           <div class="arrowDiv"> </div>
+                        </div>
+                        <div class="compPerformance compMoney">
+                            <span></span>
+                           <div class="arrowDiv"> </div>
+                        </div>
+                        <div class="compTires compMoney">
+                            <span></span>
+                           <div class="arrowDiv"> </div>
+                        </div>
+                        <div class="compSuspension compMoney">
+                            <span></span>
+                           <div class="arrowDiv"> </div>
+                        </div>
+                        <div class="compArmor compMoney">
+                            <span></span>
+                           <div class="arrowDiv"> </div>
+                        </div>
                     </div>
                    </div>
                 </div>
@@ -198,7 +251,6 @@
     <script src="loadSpeedAndUpgrades.js"></script>
     <script src="loadDescription.js"></script>
     <script src="loadPicture.js"></script>
-    <script src="loadDefaultBikeInfo.js"></script>
     <script src="animationEvents.js"></script>  
     <script src="comparisonObjects.js"></script>  
     <script src="comparisonAnims.js"></script>

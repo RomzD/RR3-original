@@ -6,21 +6,58 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.473);
+    background-color: rgba(0, 0, 0, 0.856);
     z-index: 0;
 }
 
 
 .comparisonButton{
+    --color-sport: rgba(10, 255, 10, 0.7);
+    --color-rat: rgba(253, 23, 23, 0.7);
+    --color-super: rgba(255, 56, 205, 0.7);
+    --color-wild: rgba(9, 4, 248, 0.7);
+    --boxShadow-color: green;
     display:flex;
+    position: relative;
+    font-family: 'bad-boys';
     width: 50%;
     height: 40%;   
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    color: black;
+    outline: 2px double var(--boxShadow-color);
     background-color: white;
     border: 1px solid black;
+    overflow: hidden;
+    font-size: 2rem;
+    transition:0.5s;
 }
+.compPseudo{
+    position: absolute;
+    content: ' \21C6';
+    width: 20%;
+    height:100%;
+    top:0;
+    right:-20%;  
+    color: var(--boxShadow-color);
+    text-shadow: 1px 1px grey;
+    line-height: 2.3rem;
+    font-size: 2.3rem;
+    transition: 0.5s;
+}
+.comparisonButton:hover .compPseudo{
+    right:0%;
+    transition: 0.3s ease-in-out;
+    
+}
+
+.comparisonButton:hover {
+    transition: 0.5s;
+    box-shadow:0px 0px  5px 5px var(--boxShadow-color);
+}
+
+
 
 .comparisonContaier{
     position: absolute;
@@ -88,10 +125,28 @@
     width:282px;
     border: 1px solid black;
     border-bottom: none;
+    cursor: pointer;
+ 
 }
 
+.buttonScrollDown span{
+    display:block;
+    width:100%;
+    height: 100%;
+    background-image: url('img/expandArrow.svg'), linear-gradient(grey, black);
+    background-size:contain;
+}
+.buttonScrollTop span{
+    display:block;
+    width:100%;
+    height: 100%;
+    transform: rotate(180deg);
+    background-image: url('img/expandArrow.svg'), linear-gradient(180deg,grey, black);
+    background-size:contain;
+}
 .buttonScrollDown{
     border-top:none;
+    
 }
 
 .comparsionTwo{
@@ -112,7 +167,7 @@
 }
 
 
-.comparisonWrapper div:nth-child(n+2){
+.comparisonWrapper div:nth-child(n+2):not(.arrowDiv, .spacer){
     flex:1;
     box-sizing: border-box;
     border:1px solid black;
@@ -121,7 +176,3 @@
     height:220px;
 }
 
-.resultHead{
-    height: 259.96px;
-    width:100%;
-}
